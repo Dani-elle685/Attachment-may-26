@@ -1,0 +1,80 @@
+nav {
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.nav a {
+  margin-right: 1rem;
+  color: #bf0a0a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav a:hover {
+  color: #2b0d0d;
+}
+
+.logo {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 0px 16px;
+  background-color: black;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo:hover{
+    background-color: white;
+    color: black;
+}
+
+.nav button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.services {
+  
+}
+.services-header{
+    text-align: center;
+}
+
+.service{
+
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* .services-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+.services-container{
+    display:grid ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
