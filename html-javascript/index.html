@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name = "";
+        let counter =0 ;
+        let nameInput ="" ;
+
+        function helloWorld() {
+            name = prompt("What is your name?");
+            alert("Hello, World! Nice to meet you, " + name + "!");
+            document.querySelector(".nameDiv").innerHTML = "Your name is: " + name;
+        }
+
+        function count() {
+            counter++;
+            document.querySelector(".counter").innerHTML = counter;
+        }
+
+
+         function changeName() {
+            name =  document.querySelector("#nameInput").value;
+            console.log(name);
+            document.querySelector(".nameDiv").innerHTML = "Your name is: " + name;
+        }
+
+        function showResult() {
+            let result = eval(document.querySelector("#result").value);
+            document.querySelector("#result").value = result;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".countBtn").onclick = count;
+
+        }); 
+
+        function clickButton(id) {
+            document.querySelector("#result").value += id;
+        }
+
+
+        //works
+        // document.addEventListener("click", count);
+
+        //null results
+        // document.querySelector("button").onclick = count;
+    </script>
+</head>
+<body>
+    <h1 class="nameDiv">Hello, World!</h1>
+    <button onclick="helloWorld()">Click Me!</button>
+    <h1 class="counter">0</h1>
+    <button class="countBtn">Count Clicks</button>
+
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="changeName()">Change Name</button> <br/> <br/>
+
+    <button onclick="clickButton('1')">1</button>
+    <button id="2" onclick="clickButton('2')">2</button>
+    <button id="3" onclick="clickButton('3')">3</button>
+    <button id="4" onclick="clickButton('4')">4</button>
+    <button id="5" onclick="clickButton('5')">5</button>
+    <button id="6" onclick="clickButton('6')">6</button>
+    <button id="7" onclick="clickButton('7')">7</button>
+    <button id="8" onclick="clickButton('8')">8</button>
+    <button id="9" onclick="clickButton('9')">9</button>
+    <button id="0" onclick="clickButton('0')">0</button>
+    <button onclick="clickButton('+')">+</button>
+    <button onclick="clickButton('-')">-</button>
+     <button onclick="clickButton('%')">%</button>
+    <button onclick="showResult()">Result</button>
+    <input autofocus type="text" id="result" placeholder="0" >
+
+</body>
+</html>
