@@ -55,10 +55,9 @@
     <h1 class="counter">0</h1>
     <button class="countBtn">Count Clicks</button>
 
-
     <input type="text" id="nameInput" placeholder="Enter your name">
     <button onclick="changeName()">Change Name</button> <br/> <br/>
-
+    <br/>
     <button onclick="clickButton('1')">1</button>
     <button id="2" onclick="clickButton('2')">2</button>
     <button id="3" onclick="clickButton('3')">3</button>
@@ -71,9 +70,15 @@
     <button id="0" onclick="clickButton('0')">0</button>
     <button onclick="clickButton('+')">+</button>
     <button onclick="clickButton('-')">-</button>
-     <button onclick="clickButton('%')">%</button>
-    <button onclick="showResult()">Result</button>
+    <button onclick="clickButton('%')">%</button>
+    <button onclick="showResult()">=</button>
     <input autofocus type="text" id="result" placeholder="0" >
+
+    <div id="data-container"></div>
+
+    <div id="name-container"></div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
