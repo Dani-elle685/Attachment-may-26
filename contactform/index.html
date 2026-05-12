@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage CRUD Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .table-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background: #007bff;
+            color: white;
+        }
+
+        .edit-btn {
+            background: orange;
+            margin-bottom: 5px;
+        }
+
+        .delete-btn {
+            background: red;
+        }
+
+        .error {
+            border-color: red;
+        }
+
+        .success {
+            border-color: green;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <form id="contactForm">
+        <h1>Contact Form CRUD</h1>
+
+        <input type="hidden" id="editIndex" />
+
+        <input type="text" id="name" placeholder="Enter Name" />
+        <div class="error-message" id="nameError"></div>
+
+        <input type="text" id="email" placeholder="Enter Email" />
+        <div class="error-message" id="emailError"></div>
+
+        <input type="text" id="phone" placeholder="Enter Phone" />
+        <div class="error-message" id="phoneError"></div>
+
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <div class="error-message" id="genderError"></div>
+
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="china">China</option>
+        </select>
+        <div class="error-message" id="countryError"></div>
+
+        <button type="submit" id="submitBtn">
+            Save User
+        </button>
+    </form>
+
+    <div class="table-container">
+        <h2>Saved Users</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
